@@ -73,19 +73,21 @@ namespace ASCOM.scopefocus
         private void button1_Click(object sender, EventArgs e)
         {
             // CW button
+            stepsize = Convert.ToSingle(textBox2.Text);
             driver.Move(stepsize);
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            stepsize = Convert.ToSingle(textBox2.Text);
             driver.Move(-stepsize);
             //CCW button
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            stepsize = Convert.ToSingle(textBox2.Text);
+        
         }
 
         private void timer1_Tick(object sender, EventArgs e)
